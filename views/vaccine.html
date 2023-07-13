@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COVID Vaccination Booking</title>
+
+  <style>
+    /* CSS styling for the form */
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input[type="text"], input[type="date"], input[type="email"], select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>COVID Vaccination Booking</h1>
+    <form id="bookingForm" method="POST" action="/vaccine">
+        
+      <input type="text" placeholder="Full Name" required name="fullName">
+      <input type="date" placeholder="Date of Birth" required name="dob">
+      <input type="email" placeholder="Email Address" required name="email">
+      <select required name="vaccinationcenter">
+        <option disabled selected>Select a Vaccination Center</option>
+        <option value="center1">Vaccination Center 1</option>
+        <option value="center2">Vaccination Center 2</option>
+        <option value="center3">Vaccination Center 3</option>
+      </select>
+      <button type="submit">Book Appointment</button>
+    </form>
+  </div>
+
+ 
+</body>
+</html>

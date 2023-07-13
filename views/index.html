@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Loader styles */
+.loader-wrapper {
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Landing page styles */
+.landing-page {
+  display: none;
+  height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+.content {
+  text-align: center;
+  margin-top: 20px; /* Add margin to center the content vertically */
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+
+  <div class="landing-page">
+    <div class="content">
+      <h1>Welcome to the Covid vaccination booking System</h1>
+      
+      <a href="login.html" class="btn">Book a center</a>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("load", function() {
+    var loaderWrapper = document.querySelector(".loader-wrapper");
+    var landingPage = document.querySelector(".landing-page");
+  
+    // Hide the loader after a delay
+    setTimeout(function() {
+      loaderWrapper.style.display = "none";
+      landingPage.style.display = "block";
+    }, 2000); // Change the delay duration (in milliseconds) as desired
+  });
+  
+  </script>
+</body>
+</html>
